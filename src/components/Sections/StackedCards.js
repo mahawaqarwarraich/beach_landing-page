@@ -74,13 +74,13 @@ const StackedCards = () => {
 
                 <h1 className='text-4xl font-times text-customPurple font-bold mb-10'>Title</h1>
 
-                <div className='flex space-x-6 mb-4'>
+                <div className='flex space-x-5 mb-4'>
 
 
 
                     {
                         carouselVideos.map((video, index) => (
-                            <div key={index} className={` transition-all duration-700 ease-in-out ${expandedCardIndex === index ? 'w-[500px]' : 'w-60'}`} onMouseEnter={() => handleMouseEnter(index)}>
+                            <div key={index} className={` transition-all duration-700  min-w-0 ease-in-out ${expandedCardIndex === index ? 'w-[500px]' : 'w-60'}`} onMouseEnter={() => handleMouseEnter(index)}>
                                 <Card  {...video} hideDescription={isTransitioning && expandedCardIndex === index} />
 
                             </div>
